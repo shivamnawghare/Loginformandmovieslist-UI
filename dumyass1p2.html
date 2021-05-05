@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lightSlider Demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="lightslider-master/src/css/lightslider.css"/>
+    <style>
+
+        body {
+            background-color: #ed3020;
+        }
+
+        ul {
+            list-style: none outside none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .item {
+            background-color: #ed3020;
+            height: 96vh;
+        }
+
+        .content-slider li {
+            background-color: black;
+            text-align: center;
+            color: #FFF;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 700px;
+            width: 400px;
+        }
+
+        .content-slider .im {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: contain;
+        }
+
+            .content-slider .im img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="lightslider-master/src/js/lightslider.js"></script>
+    <script>
+         $(document).ready(function() {
+            $("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                speed:500,
+                auto:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="item">
+        <ul id="content-slider" class="content-slider">
+            <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="antman.jpg" alt=""></a></div>
+            </li>
+             <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="spm.jpg" alt=""></a></div>
+            </li> 
+            <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="hulkk.jpg" alt=""></a></div>
+            </li>
+             <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="th.jpg" alt=""></a></div>
+            </li> 
+            <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="cm.jpg" alt=""></a></div>
+            </li>
+             <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="iron3.jpg" alt=""></a></div>
+            </li> 
+            <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="nice.jpg" alt=""></a></div>
+            </li>
+            <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="civil.jpg" alt=""></a></div>
+            </li>
+            <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="avv.jpg" alt=""></a></div>
+            </li>
+            <li>
+                <div class="im"><a href="C:/Users/HP/realtime-comment/public/index.html"><img src="sp2.jpg" alt=""></a></div>
+            </li>
+        </ul>
+    </div>
+    
+
+</body>
+</html>
